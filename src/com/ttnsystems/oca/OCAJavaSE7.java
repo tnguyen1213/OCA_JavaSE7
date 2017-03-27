@@ -17,6 +17,9 @@ public class OCAJavaSE7 {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hello world!");
+        if (args.length > 0){
+            System.out.println("Hello " + args[0]);
+        }
     }
     
 }
