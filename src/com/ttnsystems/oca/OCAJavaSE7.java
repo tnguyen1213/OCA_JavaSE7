@@ -5,9 +5,11 @@
  */
 package com.ttnsystems.oca;
 
+import java.util.*;
+
 /**
  *
- * @author patrick
+ * @author Patrick Nguyen
  */
 public class OCAJavaSE7 {
 
@@ -16,11 +18,29 @@ public class OCAJavaSE7 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello world!");
-        System.out.println("Another line.");
-        if (args.length > 0){
-            System.out.println("Hello " + args[0]);
+        Scanner inputText = new Scanner(System.in);
+        List<String> enteredNames = new ArrayList<String>();        
+        
+        int nameCount = 0;
+        
+        do {
+            System.out.println("Please enter a name or press <Enter> to stop.");
+            enteredNames.add(nameCount, inputText.nextLine());
+            //System.out.println("\n");
+            } while (enteredNames.get(nameCount++).length() > 0);
+       
+        if (enteredNames.size() > 0) {
+            int printNameCount = 0;
+        
+            while (enteredNames.get(printNameCount).length() > 0){
+                System.out.println("Hello " + enteredNames.get(printNameCount++) + "!");
+            }
         }
+
+        for(int i = 0; i < args.length; i++){
+            System.out.println("Hello " + args[i] + "!");
+        }
+        
+        System.out.println("Hello World!\n");
     }
-    
 }
