@@ -30,10 +30,9 @@ public class OCAJavaSE7 {
             } while (enteredNames.get(nameCount++).length() > 0);
        
         if (enteredNames.size() > 0) {
-            int printNameCount = 0;
-        
-            while (enteredNames.get(printNameCount).length() > 0){
-                System.out.println("Hello " + enteredNames.get(printNameCount++) + "!");
+            nameCount = 0;
+            while (enteredNames.get(nameCount).length() > 0){
+                System.out.println("Hello " + enteredNames.get(nameCount++) + "!");
             }
         }
 
