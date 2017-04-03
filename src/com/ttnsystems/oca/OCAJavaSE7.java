@@ -26,7 +26,6 @@ public class OCAJavaSE7 {
         do {
             System.out.println("Please enter a name or press <Enter> to stop.");
             enteredNames.add(nameCount, inputText.nextLine());
-            //System.out.println("\n");
             } while (enteredNames.get(nameCount++).length() > 0);
        
         if (enteredNames.size() > 0) {
